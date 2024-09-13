@@ -1,6 +1,6 @@
 public class LogAnalyzer
 {
-    // Where to calculate the hourly access counts.
+    // Array to store hourly access counts.
     private int[] hourCounts;
     // Use a LogfileReader to access the data.
     private LogfileReader reader;
@@ -8,8 +8,7 @@ public class LogAnalyzer
 
     public LogAnalyzer()
     {
-        // Create the array object to hold the hourly
-        // access counts.
+        //array has fixed size of 24, index 0 therefore (0-23)
         hourCounts = new int[24];
         // Create the reader to obtain the data.
         reader = new LogfileReader();
@@ -40,3 +39,4 @@ public class LogAnalyzer
         reader.printData();
     }
 }
+
